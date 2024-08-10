@@ -7,7 +7,7 @@ int findmin()
     for(i=1;i<=n;i++)
     if(s[i]==0)
     {
-        min=1;
+        min=i;
         break;
     }
     for(i=1;i<=n;i++)
@@ -29,6 +29,8 @@ void dijk()
     d[v]=0;
     for(k=1;k<=n;k++)
     {
+        u=findmin();
+        s[u]=1;
         for(w1=1;w1<=n;w1++)
         {
             if(w[u][w1]!=999 && s[w1]==0)
